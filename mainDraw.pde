@@ -27,3 +27,11 @@ void draw() {
     drawWindows(xPosition, yPosition, buildingHeight, windowSize, windowMargin);// call method drawingWindow, passing parameters
   }
 }
+
+
+// ----------------------- METHOD/function TO DRAW THE WINDOWS IN EACH BUILDING  -------------------------
+void drawWindows(int xPosition, int yPosition, int buildingHeight, int windowSize, int windowMargin) {
+  int numRows = 15; // Rows of windows
+  int numCols = 3; // Columns of windows
+
+}
