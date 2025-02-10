@@ -1,12 +1,48 @@
+boolean isNight = false;  // Boolean to check if it's night time
+int[] buildingHeights = new int[15]; // Array to store building heights
+
+// Arrays to store clouds positions and sizes
+float[] cloudX = new float[5];
+float[] cloudY = new float[5];
+float[] cloudWidth = new float[5];
+float[] cloudHeight = new float[5];
+
 void setup() {
  fullScreen();
- noLoop();
- stroke(153);
+ 
+ for (int i = 0; i < buildingHeights.length; i++) {
+    buildingHeights[i] = int(random(350, 600)); // Random height for the buildings
+  }
+
+  for (int i = 0; i < cloudX.length; i++) {
+    cloudX[i] = random(width); // Random x position
+    cloudY[i] = random(100, 150); // Random y position (higher in the sky)
+    cloudWidth[i] = random(80, 150); // Random width for the clouds
+    cloudHeight[i] = cloudWidth[i] * 0.5; // Height is half of the width
+  }
 
 }
 
 
-void draw() {
+void draw()
+
+{
+  if (isNight) {
+    drawNightBackground(); // Draw night background if it's night
+    drawStars(); // Draw stars
+    drawMoon(); // Draw moon
+  } else {
+    drawGradient(); // light blue
+    drawClouds(); // Draw clouds during the day
+  }
+  
+  drawBuildings(); // Draw buildings regardless of day or night
+}
+
+
+void drawBuildings() {
+  int buildingWidth = width / 15;  // Width of each building
+
     // ----------------------- DRAW BUILDINGS -------------------------
   background(157, 209 ,244); //by defaut , light blue 
   int buildingwidth = width / 15; //width of each building
