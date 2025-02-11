@@ -1,9 +1,17 @@
 /*
+
 Name : KATE KEIROZ
 Student Number: W20114857.
+---------------------------
 
-Brief description of piece (1 or 2 sentences MAX):
-===================================================
+
+
+
+
+
+
+Brief description:
+=================
 
 The night and day city is a illustrate draw I've developed for my Programming Fundamentals  module in my Hidp in Computer Science course. I developed this illustrate draw using processing software sketchbook .
 
@@ -13,7 +21,8 @@ Instructions:
 =============
 
 To run the program ;
- - unzip  KateKeiroz folder 
+- dowload the zip file 
+- unzip  KateKeiroz folder 
 - open processing software
 - go to file > Open > "folder KateKeiroz" > code.pde > open
 - hit run bottom on top left 
@@ -25,33 +34,32 @@ The interactive features in the program is toggle between dat/night, with  the m
 Known bugs/problems:
 ====================
 
+
+
+
+
+
+
 References / sources :
 ====================
 To assist me during the development of this assigment , I have used the following resources :
 
+Resources used to help me in the proper use of arrays : https://www.youtube.com/watch?v=4JzDttgdILQ , https://www.w3schools.com/java/java_arrays.asp and
+https://processing.org/reference/Array.html 
 
+Resources used to add random method : https://processing.org/reference/random_.html
 
-Resources used to help me have a version control of the changes in my code : https://www.reddit.com/r/github/comments/jufg52/how_can_i_put_a_program_i_made_in_processing_into/
+Resources used to check how to acess arrays values : https://processing.org/reference/arrayaccess.html
+
+Resources used to check shortcut for writing an if and else structure : https://processing.org/reference/conditional.html
+
+Resources used to help me create gradient color : https://stackoverflow.com/questions/67829059/how-can-i-create-proper-gradient-using-processing and https://processing.org/reference/lerpColor_.html
 
 Resource used to help me to have a good overview of how to code using processing : https://www.youtube.com/watch?v=4JzDttgdILQ 
 
-
-
 Resources used to help me understand the sintax od mousePressed method: https://processing.org/reference/mousePressed.html
 
+Resources used to help me have a version control of the changes in my code : https://www.reddit.com/r/github/comments/jufg52/how_can_i_put_a_program_i_made_in_processing_into/
 
 
-
-
-
-Any sources referred to during the development of the assignment.
-You don't need to reference lecture/lab materials.
-**You do need to specify precisely any other sources**.
-
-i.e. processing.org is too generic. You need to be more specific 
-
-e.g. https://processing.org/examples/bouncingball.html 
-     or a page number from a book etc.
-
-Failure to fully  reference such material used may result in plagiarism process being brought into play. 
 */
