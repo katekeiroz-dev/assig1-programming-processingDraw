@@ -1,12 +1,14 @@
 boolean isNight = false;  // Boolean to check if it's night time
 int[] buildingHeights = new int[15]; // Array to store building heights
 float[][] clouds = new float[5][4]; // Arrays to store cloud positions and sizes: x, y, width, height
+float[][] stars = new float[150][2]; // Static stars positions
 
 
 void setup() {
   fullScreen();
   createBuildings();
   createClouds();
+  createStars(); // Generate stars only once
 }
 
 void draw() {
@@ -16,7 +18,21 @@ void draw() {
     drawDay();
   }
   drawBuildings(); // either night or day 
+  drawTextOverlay(); // Draw text overlay on top of everything
 }
+void drawTextOverlay() {
+  fill(168, 194 ,158); 
+  textSize(40);
+  textAlign(CENTER, CENTER);
+  
+  // at the top - my full name
+  text("KATE KEIROZ", width / 2, 50);
+  
+  // at the bottom - my student ID
+  fill(0);
+  text("W20114857", width / 2, height - 50);
+}
+
 
 void createBuildings() {
   for (int i = 0; i < buildingHeights.length; i++) {
@@ -30,6 +46,13 @@ void createClouds() {
     clouds[i][1] = random(100, 150); // y position (higher in the sky)
     clouds[i][2] = random(80, 150); // width
     clouds[i][3] = clouds[i][2] * 0.5; // Height is half of the width
+  }
+}
+
+void createStars() {
+  for (int i = 0; i < stars.length; i++) {
+    stars[i][0] = random(width); // x position
+    stars[i][1] = random(height); // y position
   }
 }
 
@@ -110,10 +133,11 @@ void drawMoon() {
   ellipse(width - 100, 100, 300, 300);
 }
 
+
 void drawStars() {
   fill(255);
-  for (int i = 0; i < 50; i++) {
-    ellipse(random(width), random(height), 2, 2);
+  for (float[] star : stars) {
+    ellipse(star[0], star[1], 2, 2);
   }
 }
 
@@ -125,5 +149,6 @@ void drawSun() {
 
 void mousePressed() {
   isNight = !isNight; // Toggle the isNight variable when the mouse is pressed
+  redraw();
 
 }
