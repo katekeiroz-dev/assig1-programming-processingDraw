@@ -1,30 +1,31 @@
 /* Reflection
 
-** EXAMPLE ONLY **
-
 ******************
 
-Name : 
+Name : KATE KEIROZ
+Student Number: W20114857.
 
-Student Number:
 
-Part A - Mark (X /9)
+****************** Reflection ******************
+
+
+Part A - Mark (9 /9)
 -----------------------------
 
-Comments - 0/1
-indented/formatted - 0/1 
-naming - 0/1
-inclusion of Readme - 0/1 
-inclusion of completed Reflection - 0/5
+Comments - 1/1
+indented/formatted - 1/1 
+naming - 1/1
+inclusion of Readme - 1/1 
+inclusion of completed Reflection - 5/5
 
 
 Part B - Mark (X /6)
 -----------------------------
 
-line xx Sizing 0/1
+line 7 Sizing 1/1
 
-line XX - draw()  0/3
-line XX - setup()  0/2
+line 13 - draw()  3/3
+line 6 - setup()  2/2
 
 ** THIS FOLLOWING SECTIONS ARE INCOMPLETE
 YOU WILL NEED TO COMPLETE THEM  YOURSELF **
@@ -34,7 +35,7 @@ Part C - Mark (X /10)
 -----------------------------
 Use of if statements:
 
-line xx shows if ..
+line 14 shows if ..
 line xx shows nested if..
 
 Part D - Mark (X/20)
