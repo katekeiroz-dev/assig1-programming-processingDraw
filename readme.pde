@@ -61,5 +61,7 @@ Resources used to help me understand the sintax od mousePressed method: https://
 
 Resources used to help me have a version control of the changes in my code : https://www.reddit.com/r/github/comments/jufg52/how_can_i_put_a_program_i_made_in_processing_into/
 
+Resources used to create a flowchart of the assignment: https://whimsical.com/assignment-1-programming-GHSjE8tsXAALzHXvXaAqAn@3QU9HnCUztRKQYLEJabmaFkVUcfLKXnz8iRYiTD
+
 
 */
