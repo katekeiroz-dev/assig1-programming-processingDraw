@@ -1,60 +1,30 @@
 boolean isNight = false;  // Boolean to check if it's night time
 int[] buildingHeights = new int[15]; // Array to store building heights
+float[][] clouds = new float[5][4]; // Arrays to store cloud positions and sizes: x, y, width, height
 
-// Arrays to store clouds positions and sizes
-float[] cloudX = new float[5];
-float[] cloudY = new float[5];
-float[] cloudWidth = new float[5];
-float[] cloudHeight = new float[5];
 
 void setup() {
- fullScreen();
- 
- for (int i = 0; i < buildingHeights.length; i++) {
-    buildingHeights[i] = int(random(350, 600)); // Random height for the buildings
-  }
-
-  for (int i = 0; i < cloudX.length; i++) {
-    cloudX[i] = random(width); // Random x position
-    cloudY[i] = random(100, 150); // Random y position (higher in the sky)
-    cloudWidth[i] = random(80, 150); // Random width for the clouds
-    cloudHeight[i] = cloudWidth[i] * 0.5; // Height is half of the width
-  }
-
+  fullScreen();
+  createBuildings();
+  createClouds();
 }
 
-
-void draw()
-
-{
+void draw() {
   if (isNight) {
-    drawNightBackground(); // Draw night background if it's night
-    drawStars(); // Draw stars
-    drawMoon(); // Draw moon
+    drawNight();
   } else {
-    drawGradient(); // light blue
-    drawClouds(); // Draw clouds during the day
+    drawDay();
   }
-  
-  drawBuildings(); // Draw buildings regardless of day or night
+  drawBuildings(); // either night or day 
+}
+
+void createBuildings() {
+  for (int i = 0; i < buildingHeights.length; i++) {
+    buildingHeights[i] = int(random(350, 600)); // for the buildings don't be all at same level
+  }
 }
 
 
-void drawBuildings() {
-  int buildingWidth = width / 15;  // Width of each building
-
-    // ----------------------- DRAW BUILDINGS -------------------------
-  background(157, 209 ,244); //by defaut , light blue 
-  int buildingwidth = width / 15; //width of each building
-
-   // -----------------------   DRAWING 15 BUILDINGS INTO A LOOP -------------------------
-  for(int i = 0; i <15 ; i++){ //incremeting
-  int xPosition = i * buildingwidth; // calculate x (horizontal) position of each building
-  int buildingHeight = int(random(350,600)); // for the buildings do not be at same level height , so a random height between 350 and 600
-  int yPosition = height - buildingHeight;  // Position the building on the bottom of the screen
-  fill(209 ,212 ,209);  // light gray color for buildings - defaut day
-  rect(xPosition, yPosition, buildingWidth, buildingHeight);
-  
   // -----------------------  DRAW WINDOWNS -------------------------
     int windowSize = 20;    // Size of each windows
     int windowMargin = 15;  // Margin (gap) between windows
