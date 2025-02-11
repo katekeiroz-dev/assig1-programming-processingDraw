@@ -34,8 +34,46 @@ The interactive features in the program is toggle between dat/night, with  the m
 Known bugs/problems:
 ====================
 
+Problem :
+
+During the development of this work I came across an execution problem when I used the stars method through a loop, it was causing the stars. Every time drawStars() was called (which happens inside drawNight()), new random positions were generated for all 50 stars.
+This happens every frame (since draw() runs continuously in Processing).(according to processing documentation https://processing.org/reference/draw_.html).
+
+As a result, the stars appear to be flickering in a fast speed or "moving" because their positions are different every frame.
+
+void drawStars() {
+  fill(255);
+  for (int i = 0; i < 50; i++) {
+    ellipse(random(width), random(height), 2, 2);
+  }
+}
+
+Fixing the problem :
+
+Stars are now generated once in createStars() inside setup(). Which runs only once at the beginning of the program.
+The star positions are stored in an array (stars[][]) instead of being recalculated every frame and when drawStars() method is called, it now uses the positions from the stars array.
 
 
+float[][] stars = new float[50][2]; // Array to store star positions
+
+void createStars() {
+  for (int i = 0; i < stars.length; i++) {
+    stars[i][0] = random(width);  // X position
+    stars[i][1] = random(height); // Y position
+  }
+}
+
+void drawStars() {
+  fill(255);
+  for (float[] star : stars) {
+    ellipse(star[0], star[1], 2, 2);
+  }
+}
+
+
+Conclusion :
+
+By storing the stars’ positions once and reusing them in drawStars(), the stars become static instead of randomly appearing in different places every frame.
 
 
 
