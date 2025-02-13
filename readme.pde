@@ -9,7 +9,7 @@ Student Number: W20114857.
 Brief description:
 =================
 
-The night and day city is a illustrate draw I've developed for my Programming Fundamentals  module in my Hidp in Computer Science course. I developed this illustrate draw using processing software sketchbook .
+The weather city is a illustrate draw I've developed for my Programming Fundamentals  module in my Hidp in Computer Science course. I developed this illustrate draw using processing software sketchbook .
 
 
 
@@ -23,7 +23,7 @@ To run the program ;
 - go to file > Open > "folder KateKeiroz" > code.pde > open
 - hit run bottom on top left 
 
-The interactive features in the program is toggle between dat/night, with  the mousePressed event that activate whether a mouse button has been pressed. So when you click within the draw image it changes scene from day to night.
+The interactive features in the program is toggle between dat,night and rain .With  the mousePressed (mouse click event) that activate whether a mouse button has been pressed then change from day scene to night . When you hit the key 'R' or 'r' on your keyboard it changes scene to raining day.
 
 
 

@@ -19,7 +19,7 @@ inclusion of Readme - 1/1
 inclusion of completed Reflection - 5/5
 
 
-Part B - Mark (X /6)
+Part B - Mark (6 /6)
 -----------------------------
 
 Sizing 1/1 - line 10
@@ -49,38 +49,47 @@ using nested loop using for - 122, 123
 nested loop using while - 0
 
 
-Part E - Mark (18/20)
+Part E - Mark (19/20)
 -----------------------------
 
 method 1  shows no parameters - line  35,35,55, etc   
 method 2 shows 3 parameters - 104, 116
 
-Part F - Mark (0/10)
+Part F - Mark (10/10)
 -----------------------------
 use of processing function - line 149(lerpColor),120,149(Color),146(noStroke),178,180,181(random) etc
 
 
-Part G - Mark (0/10)
+Part G - Mark (10/10)
 -----------------------------
 
-line xx - use of mouse function x1 ..
-   :
-line xx - use of mouse function xn
+use of mouse function - mousePressed line 193
+use of mouse function - keyPressed line 198
 
-Part H - Mark (0/10)
+Part H - Mark (10/10)
 -----------------------------
 
-line xx - use of string, string  function x1 ..
-   :
-line xx - use of string function xn
+use of string method - line 39,40  
+use of string method - line 43,44,48 etc
 
-Part I - Mark (0/5)
+Part I - Mark (5/5)
 -----------------------------
 
-comments here with some line numbers if that helps. 
+The weather city is a illustrate draw  done with a solid and organized structure.
 
-Overall mark (0/100)
+Overall mark (97/100)
 -----------------------------
+
+
+
+
+
+
+
+
+
+
+
 Show number components and total here  (e.g. 3+2+5+6+20+16+5+6+4= 61)
 
 
