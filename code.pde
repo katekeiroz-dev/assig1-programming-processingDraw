@@ -6,42 +6,43 @@ float[][] stars = new float[150][2]; // Static stars positions
 float[][] raindrops = new float[100][2]; // static array to store raindrops
 
 
-void setup() {
+void setup() { 
   fullScreen();
   createBuildings();
   createClouds();
-  createStars(); // Generate stars only once
+  createStars(); 
   createRaindrops();
+  /* This method runs repeatedly in a loop, continuously redrawing
+  static elements of the scene that should only be executed once when 
+  the program starts. */
 }
 
-void draw() {
+void draw() { //here goes methods that run repeatedly in a loop, continuously redrawing
+
   switch (isNight ? 0 : (isRaining ? 1 : 2)) { 
     case 0:// If isNight is true, the expression execute t 0 (night scene) "default".
       drawNight();
-      break; // now check if isNight is false, then it checks isRaining
+      break; // now check if isNight is false, then if isRaining is true
     case 1: // if isNight is false and isRaining true then execute scene 1
       drawDay();
       drawRain();
       break;
-    case 2: // then If isRaining is false, execute  2 (normal day scene).
+    case 2: // then if isNight and isRaining is false , execute  2 (normal day scene).
       drawDay();
       break;
   }
-  drawBuildings(); // either night or day 
-  drawTextOver(); // Draw text overlay on top of everything
+  drawBuildings(); // either night or day (part of default scene/draw)
+  drawTextOver(); // Draw text overlay on top of everything (part of default scene/draw)
 }
 
 void drawTextOver() {
-  fill(168, 194 ,158); 
+  fill(168, 194 ,158); //light blue
   textSize(40);
   textAlign(CENTER, CENTER);
+  text("KATE KEIROZ", width / 2, 50); // display at the top - my full name
   
-  // at the top - my full name
-  text("KATE KEIROZ", width / 2, 50);
-  
-  // at the bottom - my student ID
-  fill(0);
-  text("W20114857", width / 2, height - 50);
+  fill(0); // black
+  text("W20114857", width / 2, height - 50); // display at the bottom - my student ID
 }
 
 
@@ -77,7 +78,7 @@ void createRaindrops() {
 
 void drawNight() {
   background(0); // Black background
-  drawStars();
+  drawStars(); 
   drawMoon();
 }
 
@@ -95,7 +96,7 @@ void drawBuildings() {
   for (int i = 0; i < buildingHeights.length; i++) {
     drawBuilding(i, buildingWidth);
   }
-  if (!isNight && !isRaining) { //not night
+  if (!isNight && !isRaining) { //not night and not raining
     drawSun();
   }
 }
@@ -116,7 +117,7 @@ void drawWindows(int xPosition, int yPosition, int buildingHeight) {
   int windowSize = 20;   // Size of each window
   int windowMargin = 15;  // Margin (gap) between windows
   int numRows = min(15, buildingHeight / (windowSize + windowMargin));
-  fill(isNight ? color(255, 255, 102) : color(255)); // Light yellow for night, white fior the day
+  fill(isNight ? color(255, 255, 102) : color(255)); //if isNight ==true then Light yellow for night, else the windowns color will be white 
 
   for (int row = 0; row < numRows; row++) {
     for (int col = 0; col < 3; col++) {
@@ -190,8 +191,8 @@ void mousePressed() {
 }
 
 void keyPressed() {
-  if (key == 'r' || key == 'R') {
+  if (key == 'r' || key == 'R') { //in case Uppercase 
     isNight = false;
-    isRaining = !isRaining;
+    isRaining = !isRaining; //true rain
   }
 }
