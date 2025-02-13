@@ -12,9 +12,9 @@ Student Number: W20114857.
 Part A - Mark (9 /9)
 -----------------------------
 
-Comments - 1/1
-indented/formatted - 1/1 
-naming - 1/1
+Comments - 1/1 - On multiple lines (1-6 , 15-17 , etc)
+indented/formatted - 1/1 - clean and organised structure 
+naming - 1/1 - meaningful names follwing by camelcase rules
 inclusion of Readme - 1/1 
 inclusion of completed Reflection - 5/5
 
@@ -22,44 +22,43 @@ inclusion of completed Reflection - 5/5
 Part B - Mark (X /6)
 -----------------------------
 
-line 7 Sizing 1/1
-
-line 13 - draw()  3/3
-line 6 - setup()  2/2
-
-** THIS FOLLOWING SECTIONS ARE INCOMPLETE
-YOU WILL NEED TO COMPLETE THEM  YOURSELF **
+Sizing 1/1 - line 10
+draw()  3/3  - line 20 
+setup()  2/2 - line 10 
+setup() line 10 - initializes game settings
+draw() line 20 - continuously redrawing scene
 
 
-Part C - Mark (X /10)
+
+Part C - Mark (10 /10)
 -----------------------------
 Use of if statements:
 
-line 14 shows if ..
-line xx shows nested if..
+use of if - line 86,99,179,193
+use of else - line 88
+use of ternary operator - line 22,120
+use of logical operator - line 99, 188,193, 195
+use of Comparison Operators - line 50, 148, 176, etc
+use of Arithmetic Operators - line 42,45, 107, 119 etc
 
-Part D - Mark (X/20)
+Part D - Mark (18/20)
 -----------------------------
 
-line xx - loop using for
-  :
-line xx - nested loop using for
-line xx - nested loop using while 
+using for - 50,56,65 etc
+using nested loop using for - 122, 123
+nested loop using while - 0
 
 
-Part E - Mark (0/20)
+Part E - Mark (18/20)
 -----------------------------
 
-line xx - method 1 - shows no parameters etc. 
-   :
-line xx - method x - (e.g. return value, 3 parameters )
+method 1  shows no parameters - line  35,35,55, etc   
+method 2 shows 3 parameters - 104, 116
 
 Part F - Mark (0/10)
 -----------------------------
+use of processing function - line 149(lerpColor),120,149(Color),146(noStroke),178,180,181(random) etc
 
-line xx - use of Processing function x1 ..
-   :
-line xx - use of Processing function xn
 
 Part G - Mark (0/10)
 -----------------------------
