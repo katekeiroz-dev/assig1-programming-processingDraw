@@ -1,7 +1,9 @@
 boolean isNight = false;  // Boolean to check if it's night time
+boolean isRaining = false; // Boolean to check if it's raining
 int[] buildingHeights = new int[15]; // Array to store building heights
 float[][] clouds = new float[5][4]; // Arrays to store cloud positions and sizes: x, y, width, height
 float[][] stars = new float[150][2]; // Static stars positions
+float[][] raindrops = new float[100][2]; // static array to store raindrops
 
 
 void setup() {
@@ -9,18 +11,27 @@ void setup() {
   createBuildings();
   createClouds();
   createStars(); // Generate stars only once
+  createRaindrops();
 }
 
 void draw() {
-  if (isNight) {
-    drawNight();
-  } else {
-    drawDay();
+  switch (isNight ? 0 : (isRaining ? 1 : 2)) { 
+    case 0:// If isNight is true, the expression execute t 0 (night scene) "default".
+      drawNight();
+      break; // now check if isNight is false, then it checks isRaining
+    case 1: // if isNight is false and isRaining true then execute scene 1
+      drawDay();
+      drawRain();
+      break;
+    case 2: // then If isRaining is false, execute  2 (normal day scene).
+      drawDay();
+      break;
   }
   drawBuildings(); // either night or day 
-  drawTextOverlay(); // Draw text overlay on top of everything
+  drawTextOver(); // Draw text overlay on top of everything
 }
-void drawTextOverlay() {
+
+void drawTextOver() {
   fill(168, 194 ,158); 
   textSize(40);
   textAlign(CENTER, CENTER);
@@ -56,6 +67,14 @@ void createStars() {
   }
 }
 
+void createRaindrops() {
+  for (int i = 0; i < raindrops.length; i++) {
+    raindrops[i][0] = random(width);
+    raindrops[i][1] = random(100, 200);
+  }
+}
+
+
 void drawNight() {
   background(0); // Black background
   drawStars();
@@ -63,7 +82,11 @@ void drawNight() {
 }
 
 void drawDay() {
-  drawGradient();
+  if (isRaining) {
+    background(105, 105, 105); // Dark gray background when raining
+  } else {
+    drawGradient();
+  }
   drawClouds();
 }
 
@@ -72,7 +95,7 @@ void drawBuildings() {
   for (int i = 0; i < buildingHeights.length; i++) {
     drawBuilding(i, buildingWidth);
   }
-  if (!isNight) { //not night
+  if (!isNight && !isRaining) { //not night
     drawSun();
   }
 }
@@ -147,8 +170,28 @@ void drawSun() {
   ellipse(width - 75, 100, 300, 300); 
 }
 
+void drawRain() {
+  fill(0, 0, 255);
+  for (int i = 0; i < raindrops.length; i++) {
+    ellipse(raindrops[i][0], raindrops[i][1], 3, 10);
+    raindrops[i][1] += random(4, 10);
+    if (raindrops[i][1] > height) {
+      raindrops[i][0] = random(width);
+      raindrops[i][1] = random(100, 200);
+    }
+  }
+}
+
+
 void mousePressed() {
   isNight = !isNight; // Toggle the isNight variable when the mouse is pressed
   redraw();
 
+}
+
+void keyPressed() {
+  if (key == 'r' || key == 'R') {
+    isNight = false;
+    isRaining = !isRaining;
+  }
 }
