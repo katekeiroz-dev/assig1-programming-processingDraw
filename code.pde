@@ -12,7 +12,7 @@ void setup() {
   createClouds();
   createStars(); 
   createRaindrops();
-  /* This method runs repeatedly in a loop, continuously redrawing
+  /* 
   static elements of the scene that should only be executed once when 
   the program starts. */
 }
@@ -101,9 +101,9 @@ void drawBuildings() {
   }
 }
 
-void drawBuilding(int index, int buildingWidth) {
-  int xPosition = index * buildingWidth;
-  int buildingHeight = buildingHeights[index]; // Use stored height for buildings
+void drawBuilding(int i, int buildingWidth) {
+  int xPosition = i * buildingWidth;
+  int buildingHeight = buildingHeights[i]; // Use stored height for buildings
   int yPosition = height - buildingHeight; // Position the building on the bottom of the screen
 
   stroke(167);

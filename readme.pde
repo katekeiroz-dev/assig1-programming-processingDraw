@@ -97,7 +97,7 @@ Resources used to help me have a version control of the changes in my code : htt
 
 Resources used to create Switch and Ternary operator: https://www.geeksforgeeks.org/java-ternary-operator-with-examples/ and https://dev.to/kaviyak/switch-and-ternary-operator-2cme
 
-Resources used to create a flowchart of the assignment: https://whimsical.com/assignment-1-programming-GHSjE8tsXAALzHXvXaAqAn@3QU9HnCUztRKQYLEJabmaFkVUcfLKXnz8iRYiTD
+Resources used to create a flowchart of the assignment: https://whimsical.com/assignment-1-programming-GHSjE8tsXAALzHXvXaAqAn
 
 
 
