@@ -31,7 +31,7 @@ void draw() { //here goes methods that run repeatedly in a loop, continuously re
       drawDay();
       break;
   }
-  drawBuildings(); // either night or day (part of default scene/draw)
+  drawAllBuildings(); // either night or day (part of default scene/draw)
   drawTextOver(); // Draw text overlay on top of everything (part of default scene/draw)
 }
 
@@ -91,27 +91,27 @@ void drawDay() {
   drawClouds();
 }
 
-void drawBuildings() {
-  int buildingWidth = width / 15;  // Width of each building
+void drawAllBuildings() {
+  int buildingWidth = width / 15;  
+
   for (int i = 0; i < buildingHeights.length; i++) {
-    drawBuilding(i, buildingWidth);
+    int xPosition = i * buildingWidth;
+    int buildingHeight = buildingHeights[i];  
+    int yPosition = height - buildingHeight;  
+
+    stroke(167);
+    strokeWeight(3);
+    fill(209, 212, 209);  
+    rect(xPosition, yPosition, buildingWidth, buildingHeight);
+    
+    drawWindows(xPosition, yPosition, buildingHeight);
   }
-  if (!isNight && !isRaining) { //not night and not raining
+
+  if (!isNight && !isRaining) {  
     drawSun();
   }
 }
 
-void drawBuilding(int i, int buildingWidth) {
-  int xPosition = i * buildingWidth;
-  int buildingHeight = buildingHeights[i]; // Use stored height for buildings
-  int yPosition = height - buildingHeight; // Position the building on the bottom of the screen
-
-  stroke(167);
-  strokeWeight(3);
-  fill(209, 212, 209); // Light gray
-  rect(xPosition, yPosition, buildingWidth, buildingHeight);
-  drawWindows(xPosition, yPosition, buildingHeight);
-}
 
 void drawWindows(int xPosition, int yPosition, int buildingHeight) {
   int windowSize = 20;   // Size of each window
