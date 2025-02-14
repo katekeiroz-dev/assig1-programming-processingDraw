@@ -75,7 +75,7 @@ use of string method - line 43,44,48 etc
 Part I - Mark (5/5)
 -----------------------------
 
-The weather city is a illustrate draw  done with a solid and organized structure.
+The rain/day/night city is a illustrate draw  done with a solid and organized structure.
 
 Overall mark (97/100)
 -----------------------------

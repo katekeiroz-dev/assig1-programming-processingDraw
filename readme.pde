@@ -9,7 +9,7 @@ Student Number: W20114857.
 Brief description:
 =================
 
-The weather city is a illustrate draw I've developed for my Programming Fundamentals  module in my Hidp in Computer Science course. I developed this illustrate draw using processing software sketchbook .
+The rain/day/night city is a illustrate draw I've developed for my Programming Fundamentals  module in my Hidp in Computer Science course. I developed this illustrate draw using processing software sketchbook .
 
 
 
